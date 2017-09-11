@@ -58,7 +58,7 @@ Output::
 **Recursively copying local files to S3**
 
 When passed with the parameter ``--recursive``, the following ``cp`` command recursively copies all files under a
-specifed directory to a specified bucket and prefix while excluding some files by using an ``--exclude`` parameter.  In
+specified directory to a specified bucket and prefix while excluding some files by using an ``--exclude`` parameter.  In
 this example, the directory ``myDir`` has the files ``test1.txt`` and ``test2.jpg``::
 
     aws s3 cp myDir s3://mybucket/ --recursive --exclude "*.jpg"
@@ -70,7 +70,7 @@ Output::
 **Recursively copying S3 objects to another bucket**
 
 When passed with the parameter ``--recursive``, the following ``cp`` command recursively copies all objects under a
-specifed bucket to another bucket while excluding some objects by using an ``--exclude`` parameter.  In this example,
+specified bucket to another bucket while excluding some objects by using an ``--exclude`` parameter.  In this example,
 the bucket ``mybucket`` has the objects ``test1.txt`` and ``another/test1.txt``::
 
     aws s3 cp s3://mybucket/ s3://mybucket2/ --recursive --exclude "another/*"
@@ -154,3 +154,4 @@ WARNING:: PowerShell may alter the encoding of or add a CRLF to piped or redirec
 The following ``cp`` command downloads an S3 object locally as a stream to standard output. Downloading as a stream is not currently compatible with the ``--recursive`` parameter::
 
     aws s3 cp s3://mybucket/stream.txt -
+
